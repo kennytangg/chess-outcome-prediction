@@ -1,9 +1,12 @@
 __pycache__/
-.quarto/
+*.pyc
+*.pyo
+*.pyd
+
 .venv/
 .env/
 
-# Data
+# Data 
 data/
 *.pgn
 *.csv
