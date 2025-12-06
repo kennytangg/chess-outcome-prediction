@@ -17,6 +17,8 @@ This is a chess prediction where a chess game can have three outcome:
 **Rating gap only: 57.85%** (using logistic regression)
 
 ## Results
+- Constraints (no player history, no search, elite games)
+  
 Model Performance by Game Depth
 
 > Only tested with one random_state = 42
@@ -28,7 +30,7 @@ Model Performance by Game Depth
 | **First 20 moves** (40 half-moves) | 60.01% | 60.02% | 59.89% | 59.17% | 57.51% |
 | **First 30 moves** (60 half-moves) | 62.69% | 62.79% | 62.55% | 61.15% | 59.29% |
 | **First 35 moves** (70 half-moves) | 63.19% | 63.25% | 63.08% | 61.74% | 59.66% |
-| **First 40 moves** (80 half-moves) | 63.64% | **63.74%** | 63.55% | 61.84% | 59.57% |
+| **First 40 moves** (80 half-moves) | 63.64% | 63.74% | 63.55% | 61.84% | 59.57% |
 | **All moves** (full game) | 81.71% | **90.58%** | 81.95% | 73.72% | 83.28% |
 
 At 60 half-moves with Stockfish evaluation added as a feature:
