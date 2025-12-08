@@ -43,6 +43,16 @@ This is a chess prediction where a chess game can have three outcome:
 | Logistic Regression | 61.15% | 61.47% |
 | Decision Tree | 59.29% | 55.19% |
 
+> This is using 50k sample and 20 depth
+
+| Model | No Engine | With Stockfish |
+|-------|-------------|----------------|
+| XGBoost | 62.69% | 62.34% |
+| Neural Network | 62.79% | 61.70% |
+| Random Forest | 62.55% | 61.92% |
+| Logistic Regression | 61.15% | 60.92% |
+| Decision Tree | 59.29% | 52.29% |
+
 ### Why 80 moves ?
 Game length distribution from 3.27M with all being 2300++ ELO games:
 
