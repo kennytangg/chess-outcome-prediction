@@ -9,11 +9,43 @@ For this research, I use the data from January 2024 to December 2024
 
 However the file size is too big, that I change it to a filtered version which is [Lichess Elite](https://database.nikonoel.fr/) . 
 
+## Project Structure
+
+```
+├── data/                     
+│   ├── chess_games_clean.csv
+│   ├── chess_games_feature_60_sf.csv
+│   ├── chess_games_feature.csv
+│   ├── chess_games_raw.csv
+│   └── lichess_elite_2024_full.pgn
+├── images/                   # images used in report
+│   ├── decision_tree.png
+│   ├── logistic_regression.png
+│   ├── neural_network.png
+│   ├── random_forest.png
+│   └── xgboost.png
+├── models/                   
+│   ├── pregame/              # pregame models
+│   ├── early_moves/          # first k moves models
+│   ├── early_moves_stockfish/# first k moves + small stockfish
+│   └── full_game/            # full game models
+├── notebooks/                 
+│   ├── 01_convert/           # convert raw pgn to csv
+│   ├── 02_preprocessing/     # data preprocessing
+│   ├── 03_eda_features/      # feature engineering and EDA
+│   ├── image.ipynb
+│   ├── statistics.ipynb      
+│   └── stockfish.ipynb
+├── pyproject.toml            # Dependencies 
+├── uv.lock                   
+└── README.md
+```
+
 ## Baseline
 This is a chess prediction where a chess game can have three outcome:
 
 1. **Random guessing: 33.3%** (win/loss/draw)
-2. **First move win: 43.4%** (white move first in all game)
+2. **First move win: 46.1%** (always predict white win)
 3. **Rating gap only: 57.85%** (using logistic regression)
 
 ## Results
@@ -52,19 +84,3 @@ This is a chess prediction where a chess game can have three outcome:
 | Random Forest | 62.55% | 61.92% |
 | Logistic Regression | 61.15% | 60.92% |
 | Decision Tree | 59.29% | 52.29% |
-
-### Why 80 moves ?
-Game length distribution from 3.27M with all being 2300++ ELO games:
-
-- **Mean**: 87.5 half-moves
-- **Median**: 81 half-moves
-
-| Game Phase | Move Range | Games | Percentage |
-|------------|------------|-------|------------|
-| Opening | ≤20 moves | 27,370 | 0.8% |
-| Early-Mid | 21-40 moves | 227,627 | 7.0% |
-| Midgame | 41-60 moves | 612,500 | 18.7% |
-| Late-Mid | 61-80 moves | 747,638 | 22.9% |
-| Endgame | 81+ moves | 1,652,998 | 50.6% |
-
-<img width="1189" height="490" alt="image" src="https://github.com/user-attachments/assets/11194a10-accb-4f03-8e49-b7bfa00993fc" />
