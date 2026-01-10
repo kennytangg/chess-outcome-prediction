@@ -1,0 +1,2 @@
+data/chess_games_clean.csv filter=lfs diff=lfs merge=lfs -text
+data/chess_games_feature.csv filter=lfs diff=lfs merge=lfs -text
