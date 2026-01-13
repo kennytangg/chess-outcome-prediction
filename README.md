@@ -46,7 +46,6 @@ This is a chess prediction where a chess game can have three outcome:
 
 1. **Random guessing: 33.3%** (win/loss/draw)
 2. **First move win: 46.1%** (always predict white win)
-3. **Rating gap only: 57.85%** (using logistic regression)
 
 ## Results
   
