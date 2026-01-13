@@ -67,4 +67,4 @@ def convert_pgn_to_csv(pgn_file, output_csv):
 
 
 if __name__ == "__main__":
-    convert_pgn_to_csv("data/lichess_elite_2024_full.pgn", "chess_games_raw.csv")
+    convert_pgn_to_csv("data/lichess_elite_2024_full.pgn", "data/chess_games_raw.csv")
